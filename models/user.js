@@ -9,6 +9,12 @@ var UserSchema = new Schema({
     password: {
         type: String,
         require: true
+    },
+    role:{
+        type: String,
+        default: 'basic',
+        enum: ["admin","manager","employee"],
+        require: true
     }
 })
 
