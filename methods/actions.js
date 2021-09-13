@@ -57,18 +57,22 @@ var functions = {
         )
     },
 
-    getinfo: function(req , res)
+    // getinfo: function(req , res)
+    // {
+    //     if(req.headers.authorization && req.headers.authorization.split(' ')[0]==='Bearer')
+    //     {
+    //         var token = req.headers.authorization.split(' ')[1]
+    //         var decoded = jwt.decode(token, config.secret)
+    //         return res.json({success: true, msg: 'Hello'+ decoded.name})
+    //     }
+    //     else
+    //     {
+    //         return res.json({success: false, msg: 'No Headers'})
+    //     }
+    // }
+    getinfo: function(req,res)
     {
-        if(req.headers.authorization && req.headers.authorization.split(' ')[0]==='Bearer')
-        {
-            var token = req.headers.authorization.split(' ')[1]
-            var decoded = jwt.decode(token, config.secret)
-            return res.json({success: true, msg: 'Hello'+ decoded.name})
-        }
-        else
-        {
-            return res.json({success: false, msg: 'No Headers'})
-        }
+        return res.json({success: true, msg: 'Hello User Info'})
     }
 }
 
